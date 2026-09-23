@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio of Joven M. Tibuc, a fourth year BSIT student at BISU Balilihan Campus.">
+  <title>Joven M. Tibuc | Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Joven M. Tibuc, back to top">Joven<span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">My personal portfolio</p>
+        <h1 id="hero-title">Hi, I'm <span>Joven M. Tibuc.</span></h1>
+        <p class="lead">A fourth year BSIT student at BISU Balilihan Campus. I'm learning more about technology, trying out new ideas, and making progress one step at a time.</p>
+        <a class="button" href="#about">Get to know me <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="portrait-wrap">
+        <img class="portrait" src="images/profile.jpg" alt="Portrait of Joven M. Tibuc" width="1536" height="1536">
+        <div class="portrait-caption">Joven M. Tibuc <span>BSIT Student</span></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about" aria-labelledby="about-title">
+      <div class="container section-intro">
+        <p class="eyebrow">01 / About me</p>
+        <h2 id="about-title">A little about me</h2>
+        <p>I'm Joven, a student from BISU Balilihan Campus. Outside my studies, I like playing Mobile Legends, listening to my favorite music, and exploring ideas through vibe coding. I enjoy learning at my own pace and finding new ways to be creative.</p>
+      </div>
+    </section>
+
+    <section class="section" id="hobbies" aria-labelledby="hobbies-title">
+      <div class="container">
+        <p class="eyebrow">02 / Free time</p>
+        <h2 id="hobbies-title">My hobbies</h2>
+        <div class="card-grid">
+          <article class="info-card">
+            <span class="card-number">01</span>
+            <h3>Playing Mobile Legends</h3>
+            <p>A game I enjoy playing during my free time.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <h3>Listening to music</h3>
+            <p>Music helps me relax and enjoy the moment.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <h3>Vibe coding</h3>
+            <p>I like experimenting with ideas and seeing what I can make.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="skills" aria-labelledby="skills-title">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">03 / What I'm learning</p>
+          <h2 id="skills-title">My skills</h2>
+          <p class="muted">These are some of the tools and topics I'm getting familiar with as a student.</p>
+        </div>
+        <ul class="skill-list" aria-label="Skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Basic JavaScript</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <p class="eyebrow">04 / My journey</p>
+        <h2 id="education-title">Education</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Level</th><th scope="col">School</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">College · 4th year BSIT</th><td>BISU Balilihan Campus</td></tr>
+              <tr><th scope="row">Junior &amp; Senior High School</th><td>Congressman Pablo Malasarte National High School</td></tr>
+              <tr><th scope="row">Elementary</th><td>Sal-ing Elementary School</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">05 / Say hello</p>
+          <h2 id="contact-title">Contact me</h2>
+          <p class="muted">This contact form is for the class activity. Messages entered here are not sent or stored.</p>
+        </div>
+        <form id="contact-form" class="contact-form" action="#contact" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+          <button class="button" type="submit">Submit <span aria-hidden="true">↗</span></button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Joven M. Tibuc</span>
+      <span>&copy; 2026 Joven M. Tibuc</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('form-status').textContent = 'This is a practice form, so your message was not sent.';
+    });
+  </script>
+</body>
+</html>
